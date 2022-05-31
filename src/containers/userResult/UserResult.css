@@ -1,0 +1,14 @@
+.item-container {
+    display: grid;
+    margin: 1rem 0;
+}
+
+.grid-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    grid-gap: 1rem;
+}

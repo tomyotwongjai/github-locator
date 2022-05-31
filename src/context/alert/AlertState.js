@@ -3,7 +3,7 @@ import AlertContext from './alertContext';
 import AlertReducer from './alertReducer';
 import * as Types from '../types';
 
-const AlertState = props => {
+ function AlertState(props) {
   const initialState = null;
 
   const [state, dispatch] = useReducer(AlertReducer, initialState);

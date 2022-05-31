@@ -1,0 +1,117 @@
+.repo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.back-btn{ 
+    width: 3rem;
+    border: 1px solid #ccc;
+    background-color: #241e1e;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.hire-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .repo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.back-btn {
+    width: 3rem;
+    border: 1px solid #ccc;
+    background-color: #241e1e;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.hire-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-header {
+    border: 1px solid #ccc;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #241e1e;
+    margin-bottom: 1rem;
+}
+.title {
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: .75rem;
+}
+
+.github-icon {
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 50%;
+}
+
+ img {
+    width: 150px;
+    height: 150px;
+}
+
+.web-links, a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.body, p {
+    max-width: 400px;
+}
+
+.misc, li {
+    list-style: none;
+}
+
+.social-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.repo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+} */
+

@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
 import Loader from '../../components/Loader/Loader'
 import GithubContext from '../../context/github/githubContext'
-import UserItem from './UserItem'
+import UserItem from '../userItems/UserItem'
+import './UserResult.css'
 
 
 function UserResult() {
@@ -10,10 +11,13 @@ function UserResult() {
 
   if(loading) return <Loader />;
   return (
-    <div >
+    <div className="item-container" >
+      <div className="grid-item">
       {users.map(user => (
         <UserItem key={user.id} user={user} />
       ))}
+      </div>
+    
     </div>
   );  
   }

@@ -1,11 +1,12 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import './RepoItem.css'
 
 function RepoItem({ repo: {html_url, name}}) {
   return (
-    <div className="repo-card">
+    <div className="repo-card" >
         <h3>
-            <a href={html_url} target="_blank">{name}</a>
+            <a href={html_url} target="_blank" >{name}</a>
         </h3>
     </div>
   )

@@ -1,6 +1,5 @@
 .item-container {
     display: grid;
-    margin: 1rem 0;
 }
 
 .grid-item{
@@ -12,3 +11,35 @@
     align-items: center;
     grid-gap: 1rem;
 }
+
+.show-btn{
+    height: 3rem;
+    width: 5rem;
+    border: 1px solid #ccc;
+    background-color: #241e1e;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+    .grid-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .grid-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px)  {
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+    
+    

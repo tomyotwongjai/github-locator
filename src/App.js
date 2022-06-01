@@ -3,6 +3,7 @@ import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Alert from './containers/alert/Alert';
+require('./index.css');
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       </Router>
       </AlertState>
     </GithubState>
+   
   );
 }
 

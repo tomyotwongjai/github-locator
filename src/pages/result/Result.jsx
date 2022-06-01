@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import Loader from '../../components/Loader/Loader'
 import GithubContext from '../../context/github/githubContext'
 import RepoContainer from '../../containers/user-repos/RepoContainer'
-import {AiOutlineCheck, AiOutlineClose, AiFillGithub} from 'react-icons/ai'
+import {AiOutlineCheck, AiOutlineClose, AiFillGithub, AiOutlineArrowLeft} from 'react-icons/ai'
 import './Result.css'
 
 function Result() {
@@ -38,77 +38,50 @@ function Result() {
 
   if (loading) return <Loader />;
   return (
-    <div className="repo-container">
-    <Link to='/' className='back-btn'>Back to Search</Link>
-    <div className="hire-icon">
-    Hireable: {''}
-    {hireable ? (
-      <AiOutlineCheck style={{color: "green"}} />
-    ) : (<AiOutlineClose  style={{color: "red"}}  />)}
-    </div>
+    <>
+        <div className="profile-container">
+          <div className="profile-header">
+            <Link id="backlink" to="/"><AiOutlineArrowLeft className="arrow-left" /></Link>
+            <h2>
+              Hireable: {hireable ? <AiOutlineCheck style={{ color: "green" }} /> : <AiOutlineClose style={{ color: "red" }} />}
+            </h2>
+          </div>
+        </div>
 
-    {/* Head */}
+        <div className="profile-info">
+          <div className="profile-image">
+            <img src={avatar_url} alt="profile" />
+          </div>
+          <div className="profile__info-main">
+            <span>{name}</span>
+            {location ? <p>Location: {location}</p> : null}
+            {company ? <p>Company: {company}</p> : null}
+            <a href={html_url} target="_blank" rel="noopener noreferrer">
+              {blog ? <p> {blog}</p> : null}
+            </a>
+          </div>
 
-    <div className="avatar-header">
-      <div className="title">
-        <img src={avatar_url} alt={name} className="avatar-img" />
-        <h1>{name}</h1>
-        {location && <p>Location: {location}</p>}
-      
-      </div>
-      <a href={html_url} className="repo-link">
-        <AiFillGithub className="github-icon" style={{color: "white"}} />
-      </a>
-    </div>
+          <h2>Bio:</h2>
+          <p className="user-bio">
+            {bio ? <span> {bio}</span> : null}
+          </p>
 
-    {/* Bio */}
+          <div className="profile-stats">
+            <div className="profile-stats__item">
+              <span>Followers: {followers}</span>
+              <span>Following: {following}</span>
+              <span>Repos: {public_repos}</span>
+              <span>Gist: {public_gists}</span>
+            </div>
+          </div>
 
-    <div className="body">
-      {bio && (
-        <>
-          <h3>Bio</h3>
-          <p>{bio}</p>
-        </>
-      )}
+          <h2 id="repos-title">Repos:</h2>
+          <div className="profile-repos">
+            <RepoContainer repos={repos} />
+          </div>
+        </div>
 
-      <ul>
-        <li>
-        {login && (
-                <>
-                  <strong>Username:</strong> {login}
-                </>
-              )}
-        </li>
-        <li>
-        {company && (
-                <>
-                  <strong>Company:</strong> {company}
-                </>
-              )}
-        </li>
-        <li>
-        {blog && (
-                <>
-                  <strong>Website:</strong> <a href={blog}>{blog}</a>
-                </>
-              )}
-        </li>
-      </ul>
-    </div>
-
-    <div className="social-info">
-        <ul>
-          <li>Followers: {followers}</li>
-          <li>Following: {following}</li>
-          <li>PublicRepo: {public_repos}</li>
-          <li>Public Gist: {public_gists}</li>
-        </ul>
-    </div>
-
-    <div className="repo">
-      <RepoContainer repos={repos} />
-    </div>
-  </div>
+    </>
   )
 }
 

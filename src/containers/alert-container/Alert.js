@@ -7,7 +7,7 @@ function Alert() {
 
   return (
       alert !== null && (
-            <div className="Alert-danger" styles={{color: "red"}}>
+            <div className="Alert-danger" style={{color: "red"}}>
                 {alert.msg}
             </div>
       )

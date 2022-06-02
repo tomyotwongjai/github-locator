@@ -1,7 +1,6 @@
 import {useState, useContext} from 'react'
 import GithubContext from '../../context/github/githubContext'
 import AlertContext from '../../context/alert/alertContext'
-import Alert from '../alert/Alert'
 import './UserSearch.css'
 
 
@@ -27,18 +26,20 @@ function UserSearch() {
   };
 
   return(
-  
-    <div className="wrapper">
-      <form onSubmit={handleSubmit} className='form'>
-        <input className="input-form" type='text' name='text' placeholder='Search Users...' value={text} onChange={handleChange} />
-        <button className="search-btn">Search</button>
-      </form>
-      {githubContext.users.length > 0 && (
-        <button className="clear-btn" onClick={githubContext.clearUsers}>
-          clear
-        </button>
-      )}
-    </div>
+    <>
+      <div className="wrapper">
+          <form onSubmit={handleSubmit} className='form'>
+            <input className="input-form" type='text' name='text' placeholder='Search Users...' value={text} onChange={handleChange} />
+            <button className="search-btn">Search</button>
+          </form>
+
+          {githubContext.users.length > 0 && (
+            <button className="clear-btn" onClick={githubContext.clearUsers}>
+              clear
+            </button>
+          )}
+      </div>
+    </>
   )
 }
 

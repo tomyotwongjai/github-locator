@@ -1,14 +1,19 @@
-import React from 'react'
-import UserSearch from '../../containers/userSearch/UserSearch'
-import UserResult from '../../containers/userResult/UserResult'
-import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
+import { NavBar } from '../../components'
+import {Alert, UserResult, UserSearch} from '../../containers'
+import './Home.css'
+import { Link } from 'react-router-dom'
+
 
 
 function Home() {
+
   return (
     <>
     <NavBar />
+      <div className="alert">
+        <Alert />
+      </div>
+    <Link className="link" to="/user/tomyotwongjai">Go to My Profile</Link>
     <UserSearch />
     <UserResult />
     </>

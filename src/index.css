@@ -11,14 +11,6 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	background-color: #241e1e;
-    padding: 30px;
-    margin: 30px;
 }
 
-@media screen and (max-width: 480px) {
-    body {
-        padding: 0;
-        margin: 0;
-    }
-}
-    
+ 

@@ -6,7 +6,7 @@ import './UserItems.css'
 
 function UserItem({ user: { avatar_url, login } }) {
   return (
-    <div className="container">
+    <div className="avatar-container">
       <div className="item-wrapper">
         <div className="image-container">
           <img src={avatar_url} alt={login}  />

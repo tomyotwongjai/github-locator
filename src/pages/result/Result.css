@@ -89,7 +89,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    margin-top: 20px;
+    margin: 40px;
 }
 
 #repos-title{ 
@@ -109,6 +109,11 @@ a:hover {
     .profile-repos {
         display: flex;
         flex-direction: column;
+        margin-right: 20px;
+    }
+    .user-bio, span{
+        max-width: 300px;
+        margin-left: 20px;
     }
 }
 
